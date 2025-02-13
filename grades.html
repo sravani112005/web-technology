@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Grade Calculator</title>
+</head>
+<body>
+
+<form id="studentForm">
+  Name: <input type="text" id="name" required><br><br>
+  Subject 1: <input type="number" id="sub1" required><br>
+  Subject 2: <input type="number" id="sub2" required><br>
+  Subject 3: <input type="number" id="sub3" required><br>
+  Subject 4: <input type="number" id="sub4" required><br>
+  Subject 5: <input type="number" id="sub5" required><br><br>
+  <button type="button" onclick="calculateGrade()">Calculate Grade</button>
+</form>
+
+<p id="result"></p>
+
+<script>
+function calculateGrade() {
+  const name = document.getElementById("name").value;
+  const sub1 = parseFloat(document.getElementById("sub1").value);
+  const sub2 = parseFloat(document.getElementById("sub2").value);
+  const sub3 = parseFloat(document.getElementById("sub3").value);
+  const sub4 = parseFloat(document.getElementById("sub4").value);
+  const sub5 = parseFloat(document.getElementById("sub5").value);
+
+  const totalMarks = sub1 + sub2 + sub3 + sub4 + sub5;
+  const averageMarks = totalMarks / 5;
+
+  let grade;
+  if (averageMarks >= 90) {
+    grade = "A";
+  } else if (averageMarks >= 80) {
+    grade = "B";
+  } else if (averageMarks >= 70) {
+    grade = "C";
+  } else if (averageMarks >= 60) {
+    grade = "D";
+  } else {
+    grade = "F";
+  }
+
+  document.getElementById("result").innerText = 
+    "Name: " + name + "\n" +
+    "Total Marks: " + totalMarks + "\n" +
+    "Average Marks: " + averageMarks + "\n" +
+    "Grade: " + grade;
+}
+</script>
+
+</body>
+</html>
