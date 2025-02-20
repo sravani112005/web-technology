@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Registration form</h1>
+    <div class="container">
+    <form id="registrationform">
+        <div class="input-group"></div>
+           <label for="name">Enter Your name</label>
+           <input type="text" name="name" id="name" required><br>
+           <span class="nameerror" id="nameerror"></span>
+        </div>
+        <div class="input-group">
+           <label for="age">Enter Your Age</label>
+           <input type="number" name="age" id="age" required><br>
+           <span class="error" id="ageerror"></span>
+        </div>
+        <div class="input-group">
+            <label for="mail">Enter your Email ID</label>
+            <input type="email" name="mail" id="mail" required><br>
+            <span class="error" id="emailerror"></span>
+        </div>
+        <div class="input-group">
+            <label for="pin">Enter Your PIN Code</label>
+            <input type="number" name="pin" id="pin" required><br>
+            <span class="error" id="pinerror"></span>
+        </div>
+        <div class="input-group">
+             <label for="password">Enter Your Password</label>
+            <input type="password" name="password" id="password" required>
+            <span class="error" id="passworderror"></span>
+        </div>
+
+        <button type="submit">Submit</button>
+     </form>
+    </div>
+    <p id="error" style="color: red;"></p>
+    <script src="script.js"></script>
+</body>
+</html>
